@@ -1,0 +1,101 @@
+.navigation {
+    background-color: beige
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px:;
+    z-index: 9999;
+}
+
+/**muuttaa listan displayta (li)**/
+.navigation li {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-right: 10px
+}
+
+.navigation ul {
+    height: 50px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: navy
+}
+
+.navigation a:hover {
+    color: #ff0000;
+}
+
+.blog-post {
+    width: 70%;
+    /** keskittää automaattisesti**/
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-color: crimson;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+blog.post h2 {
+    transition: 1s;
+    font-size: 1em;
+}
+
+.blog-post h2:hover {
+    transition: 1s;
+    font-size: 3em;
+}
+
+.resize {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+header h1 {
+    background-color: aquamarine;
+    margin-top: 80px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 500px){
+    .blog-post {
+        width: 100%;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

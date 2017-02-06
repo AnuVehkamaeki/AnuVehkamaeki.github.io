@@ -1,0 +1,36 @@
+.navigation {
+    background-color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 24%;
+    text-align: left;
+    position: fixed;
+    z-index: 9999;
+}
+
+.navigation li  {
+    display: block;
+    padding: 4px 10px;
+    text-decoration: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    /*tekstin koko ei toimi */
+    font-size: 100%;
+    color: white;
+}
+
+.navigation a:hover {
+    color: orangered;
+}
+
+.foot {
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    text-decoration-color: white;
+}
