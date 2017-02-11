@@ -1,99 +1,131 @@
-.navigation {
-    background-color: beige
-    text-align: center;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px:;
-    z-index: 9999;
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+	padding-top: 20px;
+	background-color: #D9D9D9;
 }
 
-/**muuttaa listan displayta (li)**/
-.navigation li {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    display: inline-block;
-    margin-right: 10px
-}
-
-.navigation ul {
-    height: 50px;
-}
-
-.navigation a{
-    text-decoration: none;
-    color: navy
-}
-
-.navigation a:hover {
-    color: #ff0000;
-}
-
-.blog-post {
-    width: 70%;
-    /** keskittää automaattisesti**/
-    margin: 0 auto;
-    margin-top: 30px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 20px;
-    border-color: crimson;
-    border-width: 5px;
-    border-style: solid;
-    border-radius: 20px;
-}
-
-blog.post h2 {
-    transition: 1s;
-    font-size: 1em;
-}
-
-.blog-post h2:hover {
-    transition: 1s;
-    font-size: 3em;
-}
-
-.resize {
+#header {
+    background-color: white;
     width: 100%;
-    max-width: 500px;
+    max-height: 50px;
+    box-shadow: 0px 1px 100px white;
+    border-bottom: 5px solid orange;
+    position:fixed;
+    top:0px;
+}
+
+.logo {
+    width: 30px;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    }
+
+.menu {
+    float: right;
+    width: 30px;
+    height: auto;
+    background-color: white;
+      }
+
+<style>
+
+        .dropbtn {
+            color: black;
+            border: none;
+            cursor: pointer;
+            background-color: #D9D9D9;
+        }
+        
+
+        .dropdown {
+            float: right;
+            position: relative;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D9D9D9;
+            min-width: 50px;
+            box-shadow: 0px 1px 60px 0px white;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            font-size: 13px;
+            padding: 5px 13px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content b{
+            color: #127ade;
+            font-size: 13px;
+            padding: 5px 13px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #127ade;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+</style>
+
+
+#wrapper h3 {
+	color: #fff;
+	line-height: 40px;
+}
+
+#wrapper a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#helsinki img{
+    max-width: 350px;
     height: auto;
 }
 
-header h1 {
-    background-color: aquamarine;
-    margin-top: 80px;
-}
 
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+#footer {
     width: 100%;
-    height: 100%;
+    max-height: 95px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 1px 60px 0px white;
+    font-size: 10px;
+    margin-left: 0px;
+    padding: 0;
+    border-bottom: 5px solid orange;
+    border-top: 5px solid orange;
+    border-color: orange;
+    /** Saa footerin pysymään sivun alalaidassa**/
+    position:fixed;
+    bottom:0;
 }
 
-@media screen and (max-width: 500px){
-    .blog-post {
-        width: 100%;
-        
-    }
+#foottext {
+    margin-top: 5px;
 }
 
-
-
-
-
-
-
-
+#footer p{
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
 
 
 
