@@ -3,25 +3,33 @@ body {
     min-height: 100%;
     min-width: 100%;
 	padding-top: 20px;
-	background-color: #D9D9D9;
+	background-color: white;
+    margin-top: 15px;
 }
 
 #header {
     background-color: white;
     width: 100%;
-    max-height: 50px;
+    max-height: 65px;
     box-shadow: 0px 1px 100px white;
     border-bottom: 5px solid orange;
     position:fixed;
-    top:0px;
+    top: 0;
 }
 
 .logo {
-    width: 30px;
+    width: 45px;
     height: auto;
     margin: 0;
     padding: 10px;
     }
+/**
+.maakaasu p{
+    width: 30px;
+    font-size: 15px;
+    float: left;
+}
+**/
 
 .menu {
     float: right;
@@ -51,24 +59,26 @@ body {
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #D9D9D9;
+            background-color: white;
             min-width: 50px;
-            box-shadow: 0px 1px 60px 0px white;
+            border: 3px solid black;
+            box-shadow: 0px 1px 60px 0px black;
             z-index: 1;
+            font-family: 'Slabo 27px', serif;
         }
 
         .dropdown-content a {
-            color: white;
-            font-size: 13px;
-            padding: 5px 13px;
+            color: black;
+            font-size: 20px;
+            padding: 15px 18px;
             text-decoration: none;
             display: block;
         }
 
         .dropdown-content b{
             color: #127ade;
-            font-size: 13px;
-            padding: 5px 13px;
+            font-size: 20px;
+            padding: 15px 18px;
             text-decoration: none;
             display: block;
         }
@@ -94,10 +104,21 @@ body {
 	text-decoration: none;
 }
 
-#helsinki img{
-    max-width: 350px;
+#content img {
+    max-width: 100%;
+    min-width: 300px;
     height: auto;
 }
+
+#content p {
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 3px solid #127ade;
+    font-family: 'Slabo 27px', serif;
+}
+
 
 
 #footer {
@@ -106,19 +127,17 @@ body {
     background-color: white;
     color: black;
     box-shadow: 0px 1px 60px 0px white;
-    font-size: 10px;
-    margin-left: 0px;
-    padding: 0;
+    font-size: 13px;
     border-bottom: 5px solid orange;
     border-top: 5px solid orange;
-    border-color: orange;
     /** Saa footerin pysymään sivun alalaidassa**/
-    position:fixed;
+    position: relative;
     bottom:0;
 }
 
 #foottext {
     margin-top: 5px;
+    font-family: 'Slabo 27px', serif;
 }
 
 #footer p{
