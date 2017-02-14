@@ -1,3 +1,5 @@
+/** Yleisesti verkkosivujen CSS koodit sekä etusivun CSS koodit **/
+
 html,
 body {
     min-height: 100%;
@@ -145,6 +147,57 @@ body {
     margin-top: 0px;
     margin-bottom: 5px;
 }
+
+/** "Kampanja"-sivun CSS koodit **/
+
+#jalostamo {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #127ade;
+}
+
+#textcontainer {
+    margin: 25px;
+    font-family: 'Slabo 27px', serif;
+    word-break: normal;
+}
+
+#kampanjajuliste img {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    padding-top: 10px;
+    border-top: 3px solid #127ade;
+}
+
+
+/** "Ajankohtaista"-sivun CSS koodit **/
+
+
+/** UUTISIKKUNA TÄHÄN **/
+#uutiset p{
+    font-family: 'Slabo 27px', serif;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+#video iframe{
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 3px solid #127ade;
+    border-bottom: 3px solid #127ade;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+
 
 
 
