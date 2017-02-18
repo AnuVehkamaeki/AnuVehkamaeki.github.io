@@ -25,21 +25,15 @@ body {
     margin: 0;
     padding: 10px;
     }
-/**
-.maakaasu p{
-    width: 30px;
-    font-size: 15px;
-    float: left;
-}
-**/
 
 .menu {
     float: right;
-    width: 30px;
+    width: 45px;
     height: auto;
     background-color: white;
       }
 
+/** Asettaa valikon tyylit ja "layoutin"**/
 <style>
 
         .dropbtn {
@@ -63,6 +57,7 @@ body {
             position: absolute;
             background-color: white;
             min-width: 50px;
+            margin-top: 43px;
             border: 3px solid black;
             box-shadow: 0px 1px 60px 0px black;
             z-index: 1;
@@ -175,8 +170,8 @@ body {
 
 /** "Ajankohtaista"-sivun CSS koodit **/
 
-
 /** UUTISIKKUNA TÄHÄN **/
+
 #uutiset p{
     font-family: 'Slabo 27px', serif;
     padding-top: 15px;
@@ -194,6 +189,152 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+
+/** Tietokoneruudulle tarkoitettu koodi breakpontilla**/
+@media only screen and (min-width: 768px) {
+    
+        #header {
+            height: 130px;
+            box-shadow: 0px 10px 100px white;
+            border-bottom: 10px solid orange;
+    }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-left: 25px;
+            padding: 10px;
+        }
+
+        .menu {
+            width: 60px;
+          }
+
+        .dropdown {
+                margin-top: 5px;
+                margin-right: 60px;
+            }
+
+            .dropdown-content {
+                min-width: 200px;
+                box-shadow: 0px 5px 90px 0px black;
+                margin-top: 56px;
+            }
+
+            .dropdown-content a {
+                font-size: 30px;
+                padding: 15px 22px;
+            }
+
+            .dropdown-content b{
+                font-size: 30px;
+                padding: 15px 22px;
+            }
+
+        #content img {
+            min-width: 100%;
+            height: auto;
+         }
+
+        #content p {
+            font-size: 60px;
+            text-align: center;
+            margin: 30px;
+            padding: 20px;
+            border-bottom: 10px solid #127ade;
+        }
+
+        #footer {
+            width: 100%;
+            max-height: 200px;
+            min-height:100px; 
+            font-size: 20px;
+            border-bottom: 10px solid orange;
+            border-top: 10px solid orange;
+        }
+
+        #foottext {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #footer p{
+            margin-left: 30px;
+            margin-bottom: 5px;
+        }
+
+        /** "Kampanja"-sivun CSS koodit isommalla näytöllä **/
+
+        #jalostamo {
+            width: 100%;
+            height: auto;
+            padding-bottom: 6px;
+            border-bottom: 6px solid #127ade;
+        }
+
+        #textcontainer {
+            width: 50%;
+            font-size: 20px;
+            margin: 30px;
+            margin-left: 50px;
+            float: left
+        }
+
+        #textcontainer h2 {
+            font-size: 30px;
+        }
+
+        #textcontainer article {
+            font-size: 20px;
+        }
+
+        #kampanjajuliste img {
+            max-width: 100%;
+            min-width: 300px;
+            height: auto;
+            margin: 20px;
+            margin-right: 50px;
+            padding: 10px;
+            border: 6px solid #127ade;
+            float: right;
+        }
+    
+        #footer {
+            clear:both;
+        }
+                
+        #uutiset p{
+            float: center;
+            padding-top: 25px;
+            padding-left: 15px;
+            font-size: 30px;
+        }
+
+        /** "Ajankohtaista"-sivun CSS koodit isommalla näytöllä **/
+
+        #uutiset p{
+            float: center;
+            padding-top: 25px;
+            padding-left: 15px;
+            font-size: 30px;
+        }
+
+        #video iframe{
+            align-content: center;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            border-top: 6px solid #127ade;
+            border-bottom: 6px solid #127ade;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }    
+    
+    
+}
+
 
 
 
