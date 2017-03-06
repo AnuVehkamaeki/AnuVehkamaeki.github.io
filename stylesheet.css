@@ -314,12 +314,6 @@ body {
 
         /** "Ajankohtaista"-sivun CSS koodit isommalla näytöllä **/
 
-        #uutiset p{
-            float: center;
-            padding-top: 25px;
-            padding-left: 15px;
-            font-size: 30px;
-        }
 
         #video iframe{
             align-content: center;
@@ -333,6 +327,57 @@ body {
             padding-bottom: 10px;
         }    
     
+
+    #uutiset {
+        height: 500px;
+        align-content: center;
+        margin-left: 250px;
+        margin-right: 250px;
+        padding: 20px;
+        border: 6px solid #127ade;
+        font-family: 'Slabo 27px', serif;
+        font-size: 35px;
+    }
+    
+    #buttons {
+        margin-left: 33%;
+        text-align: center;
+        display: inline-block;
+    }
+    
+    #buttons div{
+        margin: 10px;
+        text-align: center;
+        border: 6px solid #127ade;
+        font-size: 40px;
+        display: inline-block;
+    }
+    
+    #otsikko {
+        text-align: center;
+    }
+    
+    #päivämäärä {
+        text-align: center;
+    }
+    
+    #sisältö {
+        text-align: center;
+    }
+    
+    #photo img {
+        height: 400px;
+        width: auto;
+        margin-left: 20%;
+    }
+    
+    
+    
+    
     
 }
+
+
+
+
 
