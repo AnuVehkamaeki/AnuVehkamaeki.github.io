@@ -19,5 +19,5 @@
                 var guess = document.getElementById("number").value;
                 compareNumbers(number, guess)});
             
-   }
-   
+            }
+            }
