@@ -329,25 +329,25 @@ body {
     
 
     #uutiset {
-        height: 500px;
+        height: 300px;
         align-content: center;
         margin-left: 250px;
         margin-right: 250px;
         padding: 20px;
         border: 6px solid #127ade;
         font-family: 'Slabo 27px', serif;
-        font-size: 35px;
+        font-size: 25px;
     }
     
     .uutiset {
-        height: 400px;
+        height: 300px;
         align-content: center;
         margin-left: 250px;
         margin-right: 250px;
         padding: 20px;
         border: 6px solid #127ade;
         font-family: 'Slabo 27px', serif;
-        font-size: 30px;
+        font-size: 25px;
     }
     
     #buttons {
@@ -360,7 +360,7 @@ body {
         margin: 10px;
         text-align: center;
         border: 6px solid #127ade;
-        font-size: 40px;
+        font-size: 30px;
         display: inline-block;
     }
     
@@ -377,7 +377,7 @@ body {
     }
     
     #photo img {
-        height: 400px;
+        height: 200px;
         width: auto;
         margin-left: 20%;
     }
