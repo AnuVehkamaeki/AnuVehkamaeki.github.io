@@ -340,14 +340,14 @@ body {
     }
     
     .uutiset {
-        height: 500px;
+        height: 400px;
         align-content: center;
         margin-left: 250px;
         margin-right: 250px;
         padding: 20px;
         border: 6px solid #127ade;
         font-family: 'Slabo 27px', serif;
-        font-size: 35px;
+        font-size: 30px;
     }
     
     #buttons {
