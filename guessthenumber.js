@@ -15,7 +15,7 @@
                 else {alert("Congratulations! You guessed correctly!");
                        number = getRandomInteger(1,11);}
             
-            document.getElementById("button").addEventListener("click", function(){
+            document.getElementById("button1").addEventListener("click", function(){
                 var guess = document.getElementById("number").value;
                 compareNumbers(number, guess)});
             
