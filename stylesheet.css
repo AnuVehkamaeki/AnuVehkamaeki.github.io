@@ -7,6 +7,9 @@ body {
 	padding-top: 20px;
 	background-color: white;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #header {
@@ -178,12 +181,17 @@ body {
     padding-left: 15px;
 }
 
+
+#video {
+    display: flex;
+    justify-content: center;
+}
+
 #video iframe{
     max-width: 100%;
     min-width: 300px;
     height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto;
     border-top: 3px solid #127ade;
     border-bottom: 3px solid #127ade;
     padding-top: 5px;
@@ -191,7 +199,7 @@ body {
 }
 
 
-/** Tietokoneruudulle tarkoitettu koodi breakpontilla**/
+/** Tietokoneruudulle tarkoitettu koodi breakpointilla**/
 @media only screen and (min-width: 768px) {
     
         #header {
@@ -316,11 +324,7 @@ body {
 
 
         #video iframe{
-            align-content: center;
-            width: 100%;
-            height: auto;
-            margin-top: 10px;
-            margin-bottom: 30px;
+            margin: 10px auto 30px;
             border-top: 6px solid #127ade;
             border-bottom: 6px solid #127ade;
             padding-top: 10px;
@@ -394,10 +398,11 @@ body {
     }
     
     #propagandaa{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -180px 0 0 -240px;
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 30px;
     }
     
     
