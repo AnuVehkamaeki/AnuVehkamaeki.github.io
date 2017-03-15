@@ -340,7 +340,7 @@ body {
         padding: 20px;
         border: 6px solid #127ade;
         font-family: 'Slabo 27px', serif;
-        font-size: 40px;
+        font-size: 37px;
     }
     
     .uutiset {
@@ -351,7 +351,7 @@ body {
         padding: 20px;
         border: 6px solid #127ade;
         font-family: 'Slabo 27px', serif;
-        font-size: 40px;
+        font-size: 37px;
     }
     
     #buttons {
@@ -405,7 +405,14 @@ body {
         margin-top: 30px;
     }
     
-    
+    #bANDw {
+        margin: 10px;
+        margin-left: 350px;;
+        text-align: center;
+        border: 6px solid #127ade;
+        font-size: 30px;
+        display: inline-block;
+    }
     
     
     
