@@ -61,7 +61,7 @@
        
        
        <!-- loop lisätty -->
-    <canvas id=canvas ></canvas>
+    <canvas id=c ></canvas>
     <video id="propagandaa" width="640" height="auto" controls loop poster="great.png">
         <source src="Maakaasu_Final_720p.mpg"  type="video/mpeg" />
         <source src="Maakaasu_Final_720p.ogv"  type="video/ogg" />
@@ -69,35 +69,66 @@
     </video>
        
        
-    <div><button type="button" id="bANDw">bANDw</button></div>
-    
+     <div id="videoButtons">
+        <div><button type="button" id="bANDw">bANDw</button></div>
+        <div><button type="button" id="playORpause">playORpause</button></div>
+    </div>
+         
     <script>
+        
+        var pressed = false
+        var play = true
+        
        document.addEventListener('DOMContentLoaded', function(){
-        var v = document.getElementById('propagandaa');
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-        var back = document.createElement('canvas');
-        var backcontext = back.getContext('2d');
+            var v = document.getElementById('propagandaa');
+            var canvas = document.getElementById('c');
+            var context = canvas.getContext('2d');
+            var back = document.createElement('canvas');
+            var backcontext = back.getContext('2d');
 
-        var cw,ch;
-
-            v.addEventListener('play', function(){
-                cw = v.clientWidth;
-                ch = v.clientHeight;
-                canvas.width = cw;
-                canvas.height = ch;
-                back.width = cw;
-                back.height = ch;
-                draw(v,context,backcontext,cw,ch);
+            var cw,ch;
+           
+        
+           document.getElementById('bANDw').addEventListener('click', function(){
+               if(pressed == false){
+                    document.getElementById('c').style.display='block'
+                    cw = v.clientWidth;
+                    ch = v.clientHeight;
+                    console.log(cw +"  " +ch)
+                    canvas.width = cw;
+                    canvas.height = ch;
+                    console.log(canvas.width +"  " +canvas.height)
+                    back.width = cw;
+                    back.height = ch;
+                    console.log(back.width +"  " +back.height)
+                    draw(v,context,backcontext,cw,ch);
+                   pressed = true
+               }
+               else{
+                   (document.getElementById('c')).style.display='none'
+                    pressed = false
+               }
             },false);
 
         },false);
         
-        document.getElementById("bANDw").innerHTML.onclick = 
+        
+            document.getElementById('playORpause').addEventListener('click', function(){
+                if(play == true){
+                    document.getElementById('propagandaa').play();
+                    play = false;
+                }
+                else if(play == false){
+                    document.getElementById('propagandaa').pause();
+                    play = true;
+                }
+            })
+        
             function draw(v,c,bc,w,h) {
                 if(v.paused || v.ended){return false;} 
                 // First, draw it into the backing canvas
                 bc.drawImage(v,0,0,w,h);
+                console.log(w +"  " +h)
                 // Grab the pixel data from the backing canvas
                 var idata = bc.getImageData(0,0,w,h);
                 var data = idata.data;
@@ -117,6 +148,7 @@
                 // Start over!
                 setTimeout(function(){ draw(v,c,bc,w,h); }, 0);
             }
+    
 
     </script>
        
@@ -127,10 +159,11 @@
        
        
        
-    <!--Sama video toimii mobiililaitteella sekä tietokoneella "allowfullscreen style="height: 500px;"" avulla-->
+    <!--Sama video toimii mobiililaitteella sekä tietokoneella "allowfullscreen style="height: 500px;"" avulla
      <div id="video">
        <iframe width="560" height="315" src="https://www.youtube.com/embed/zac17sGB2uo" frameborder="0" allowfullscreen style="height: 500px;"></iframe>
        </div>
+-->
        
         <!--SLIDESHOW!!!--> 
     <div class="uutiset" id="uutiset">
