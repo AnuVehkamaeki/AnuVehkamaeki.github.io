@@ -6,7 +6,7 @@ var player1 = function(x,y,w, h,speed){
     this.speed = speed;
     };
 
-    var player = new player1(1024/4,768/4,20,20, 7);
+    var player = new player1(900/4,600/4,70,70, 7);
     
     function drawPlayer(context) {
       var x = player.x - (player.w / 2);
@@ -53,19 +53,18 @@ var player1 = function(x,y,w, h,speed){
         if(player.speed > 1){player.speed = player.speed-2};
     };
 
+
+    if(player)
+
+
+
     reset = function(){
         this.x = 100;
         this.y = 100;
         this.w = 30;
         this.h = 30;
-        this.speed = 15;
+        this.speed = 7;
     };
-
-
-
-
-
-
 
 
     function SpriteSheet(path, frameWidth, frameHeight, frameSpeed, endFrame) {
@@ -100,6 +99,8 @@ var player1 = function(x,y,w, h,speed){
             var col = Math.floor(currentFrame % framesPerRow);
 
             ctx.drawImage(image, col * frameWidth, row * frameHeight, frameWidth, frameHeight, x, y, 70, 70);
+            //ctx.fillStyle = 'red';
+            //ctx.strokeRect(x,y, player.w, player.h);
         };
         
     };

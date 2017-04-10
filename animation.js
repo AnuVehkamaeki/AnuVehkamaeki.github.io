@@ -10,7 +10,7 @@ $(window).on('load',function(){
     
     var spritesheet = new SpriteSheet('flame.png', 2048/8, 2100/7, 3, 40);
     
-    var spritesheetEnemies = new SpriteSheet('alien.png', 513/9, 456/8, 3, 9);
+    var spritesheetEnemies = new SpriteSheetEnemies('green.png', 900/6, 600/4, 3, 24);
     
     var bgReady = false;
     var bgImage = new Image();
@@ -51,8 +51,8 @@ $(window).on('load',function(){
     var render = function() {
         ctx.drawImage(bgImage,0,0,1024/2, 768/2);
         //drawPlayer(ctx);
-        for(i = 0; i<enemies.length; i++){
-            spritesheet.draw(enemies[i].x, enemies[i].y);
+        for(var i = 0; i<enemies.length; i++){
+            spritesheetEnemies.draw(enemies[i].x, enemies[i].y);
             //drawEnemy(ctx, enemies[i]);
         };
         
@@ -72,7 +72,7 @@ $(window).on('load',function(){
         if (39 in keysDown) {
           movePlayer("right");
         }
-        for(i = 0; i<enemies.length; i++){
+        for(var i = 0; i<enemies.length; i++){
             moveEnemies(enemies[i]);
         };
     };
