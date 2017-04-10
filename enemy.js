@@ -44,17 +44,19 @@ var enemy = function(x,y,w,h,speed, direction){
         return false
     };
 
-    /*function enemiesBump() {
+    function enemiesBump() {
         for(var i = 0; i< enemies.length; i++){
             var t = enemies[i]
             for(var n = 0; n< enemies.length; n++){
-                if(t.x <= (enemies[n].x+enemies[n].w) && t.y <= (enemies[n].y+enemies[n].h)  && enemies[n].x <= (t.x+t.w) && enemies[n].y <= (t.y+t.h)){
-                    return true
-                }
+                 if(!(t.x == enemies[n].x && t.y == enemies[n].y)){
+                     if(t.x <= (enemies[n].x+enemies[n].w) && t.y <= (enemies[n].y+enemies[n].h)  && enemies[n].x <= (t.x+t.w) && enemies[n].y <= (t.y+t.h)){
+                        return true
+                    }
+                 }
             }
         }
         return false
-    };*/
+    };
 
 
     var create = function(){
@@ -102,9 +104,9 @@ var enemy = function(x,y,w,h,speed, direction){
             if(enemy.x <= (player.x+player.w-20) && enemy.y <= (player.y+player.h)  && player.x <= (enemy.x+enemy.w) && player.y <= (enemy.y+enemy.h)){
                 enemy.direction =2;
             }
-            /*if(enemiesBump()){
+            if(enemiesBump()){
                 enemy.direction =2;
-            }*/
+            }
         };
         if(enemy.direction == 1){
             enemy.x -= enemy.speed;
@@ -115,9 +117,9 @@ var enemy = function(x,y,w,h,speed, direction){
             if(enemy.x <= (player.x+player.w-20) && enemy.y <= (player.y+player.h)  && player.x <= (enemy.x+enemy.w) && player.y <= (enemy.y+enemy.h)){
                 enemy.direction =3;
             }
-            /*if(enemiesBump()){
+            if(enemiesBump()){
                 enemy.direction =3;
-            }*/
+            }
         };
         if(enemy.direction == 2){
             enemy.y += enemy.speed;
@@ -128,9 +130,9 @@ var enemy = function(x,y,w,h,speed, direction){
             if(enemy.x <= (player.x+player.w-20) && enemy.y <= (player.y+player.h)  && player.x <= (enemy.x+enemy.w) && player.y <= (enemy.y+enemy.h)){
                 enemy.direction =0;
             }
-            /*if(enemiesBump()){
+            if(enemiesBump()){
                 enemy.direction =0;
-            }*/
+            }
         };
         if(enemy.direction == 3){
             enemy.x += enemy.speed;
@@ -141,9 +143,9 @@ var enemy = function(x,y,w,h,speed, direction){
             if(enemy.x <= (player.x+player.w-20) && enemy.y <= (player.y+player.h)  && player.x <= (enemy.x+enemy.w) && player.y <= (enemy.y+enemy.h)){
                 enemy.direction =1;
             }
-            /*if(enemiesBump()){
+            if(enemiesBump()){
                 enemy.direction =1;
-            }*/
+            }
         };
     };
     
