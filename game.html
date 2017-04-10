@@ -2,12 +2,7 @@
 
 <html>
     <head>
-        
         <meta charset="UTF-8" />
-        <meta name="description" content="Maakaasukampanjasivut">
-        <meta name="keywords" content="maakaasu, kampanja, energia, uusiutumaton, kampanjasivut, gasum">
-        <meta name="author" content="Anu Vehkamäki">
-        
         <!--Fontti-->
         <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
                 
@@ -20,14 +15,27 @@
         
         <title>Maakaasukampanja</title>
         
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        
+        <!-- pelin animaatio luokan koodi -->
+        <script type="text/javascript" src="animation.js"></script>
+        
+        <!-- pelin player luokan koodi -->
+        <script type="text/javascript" src="player.js"></script>
+        
+        <!-- pelin enemy luokan koodi -->
+        <script type="text/javascript" src="enemy.js"></script>
+        
         <!-- Poistaa CSS:n oletusasetukset-->
         <link rel="stylesheet" type="text/css" href="normalize.css">
         
         <!-- Liittää CSS-stylesheetin HTML koodiin-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
         
-    </head>  
-
+    </head>
 
 <body> 
     
@@ -39,47 +47,25 @@
 			<div class="dropdown">
                   <div class="dropbtn"><img class="menu" src="home.png"></div>
                   <div class="dropdown-content" style="right: 0px; left: auto;">
-                    <b href="index.html">Etusivu</b>
+                    <a href="index.html">Etusivu</a>
                     <a href="kampanja.html">Kampanja</a>
                     <a href="ajankohtaista.html">Ajankohtaista</a>
-                    <a href="game.html">Peli</a>
+                    <b href="game.html">Peli</b>
             </div>
         </div>
         </div>
-		
-    <div id="content">
-		
-        <!--Kuva-->
-        <div id="savu">
-			<img src="gas.jpg" />
-		</div> 
     
-        <!--Teksti-->
-        <div id="maakaasu">
-			<p>Maakaasulla enemmän energiaa.</p>
-		</div>
-        
-        <!--Kuva-->
-        <div id="tehdas">
-			<img src="p%C3%A4%C3%A4st%C3%B6t.jpeg" />
-		</div> 
-        
-        <!--Teksti-->
-        <div id="päästöt">
-			<p>Ympäristöystävällisempi vaihtoehto.</p>
-		</div>
     
-        <!--Kuva-->
-        <div id="helsinki">
-        <img src="helsinkimobile.jpg" />
-		</div> 
+   <div id="game">
+    <canvas id="gameCanvas" width="800" height="400" style="background-color: #127ade"></canvas>
+    </div> 
     
-        <!--Teksti-->
-        <div id="lämpö">
-			<p>Kotimme tarvitsevat lämpöä.</p>
-		</div>    
-            
+    <div id="speedButtons">
+        <div><button type="button" id="speedUp">speedUp</button></div>
+        <div><button type="button" id="speedDown">speedDown</button></div>
     </div>
+    
+    
     
     <div id="footer">
         <div id="foottext">
@@ -89,7 +75,8 @@
                 <p>Copyright Anu Vehkamäki 2017</p>
         </div>
     </div>
-        
+    
+    
     </body>
     
 </html>
