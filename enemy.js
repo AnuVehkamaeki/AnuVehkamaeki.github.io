@@ -37,7 +37,7 @@ var enemy = function(x,y,w,h,speed, direction){
     function checkCoords(x, y){
          for(i = 0; i< enemies.length; i++){
             if(x >= enemies[i].x && x <= enemies[i].x +20 && 
-              y >= enemies[i].y && y <= enemies[i].y +20){
+              y >= enemies[i].y && y <= enemies[i].y +20 /*|| x>=*/){
                 return true
             } 
         }
@@ -48,7 +48,7 @@ var enemy = function(x,y,w,h,speed, direction){
     var create = function(){
         var x = randomX();
         var y = randomY();
-        while(checkCoords(x, y)){
+        while(checkCoords(x, y) /*|| (x==1024/2+20 && y==768/2+20*/){
             x = randomX();
             y = randomY();
         }
@@ -81,7 +81,7 @@ var enemy = function(x,y,w,h,speed, direction){
 
 
 
-/* ENEMYT EIVÄT ENÄÄ LIIKU, SAATI SITTEN TÖRMÄÄ TOISISTAAN */
+/* ENEMYT EIVÄT ENÄÄ LIIKU, SAATI SITTEN KIMPOA TOISISTAAN */
     function moveEnemies(enemy) {
         if(enemy.direction == 0){
             enemy.y -= enemy.speed;
@@ -89,9 +89,9 @@ var enemy = function(x,y,w,h,speed, direction){
                 enemy.y = 10;
                 enemy.direction =2;
             }
-            if(checkCoords(enemy.x, enemy.y)){
+            /*if(checkCoords(enemy.x, enemy.y)){
                 enemy.direction =2;
-            }
+            }*/
         };
         if(enemy.direction == 1){
             enemy.x -= enemy.speed;
@@ -99,9 +99,9 @@ var enemy = function(x,y,w,h,speed, direction){
                 enemy.x = 10;
                 enemy.direction =3;
             };
-            if(checkCoords(enemy.x, enemy.y)){
+            /*if(checkCoords(enemy.x, enemy.y)){
                 enemy.direction =3;
-            }
+            }*/
         };
         if(enemy.direction == 2){
             enemy.y += enemy.speed;
@@ -109,9 +109,9 @@ var enemy = function(x,y,w,h,speed, direction){
                 enemy.y = canvas.height-10;
                 enemy.direction =0;
             };
-            if(checkCoords(enemy.x, enemy.y)){
+            /*if(checkCoords(enemy.x, enemy.y)){
                 enemy.direction =0;
-            }
+            }*/
         };
         if(enemy.direction == 3){
             enemy.x += enemy.speed;
@@ -119,9 +119,9 @@ var enemy = function(x,y,w,h,speed, direction){
                 enemy.x = canvas.width-10;
                 enemy.direction =1;
             };
-            if(checkCoords(enemy.x, enemy.y)){
+            /*if(checkCoords(enemy.x, enemy.y)){
                 enemy.direction =1;
-            }
+            }*/
         };
     };
     
@@ -156,5 +156,39 @@ var enemy = function(x,y,w,h,speed, direction){
    }); 
 
 
+    function SpriteSheet(path, frameWidth, frameHeight, frameSpeed, endFrame) {
+ 
+        var image = new Image();
+        var framesPerRow;
 
+        // calculate the number of frames in a row after the image loads
+        var self = this;
+        image.onload = function() {
+            framesPerRow = Math.floor(image.width / frameWidth);
+        };
+
+        image.src = path;
+        
+        var currentFrame = 0;  // the current frame to draw
+        var counter = 0;       // keep track of frame rate
+
+        // Update the animation
+        this.update = function() {
+            // update to the next frame if it is time
+            if (counter == (frameSpeed - 1))
+            currentFrame = (currentFrame + 1) % endFrame;
+            // update the counter
+            counter = (counter + 1) % frameSpeed;
+        ;}
+        
+        // Draw the current frame
+        this.draw = function(x, y) {
+            // get the row and col of the frame
+            var row = Math.floor(currentFrame / framesPerRow);
+            var col = Math.floor(currentFrame % framesPerRow);
+
+            ctx.drawImage(image, col * frameWidth, row * frameHeight, frameWidth, frameHeight, x, y, 70, 70);
+        };
+        
+    };
     

@@ -19,26 +19,26 @@ var player1 = function(x,y,w, h,speed){
       switch (dir) {
         case "left": 
           player.x -= player.speed;
-          if (player.x < player.w) {
-            player.x = player.w-10;
+          if (player.x < -20) {
+            player.x = -20;
           }
           break;
         case "right":
           player.x += player.speed;
-          if (player.x > (canvas.width-player.w)) {
-            player.x = (canvas.width-player.w+10);
+          if (player.x > (canvas.width-50)) {
+            player.x = (canvas.width-50);
           }
           break;
         case "up":
           player.y -= player.speed;
-          if (player.y < player.h) {
-            player.y = player.h-10;
+          if (player.y < -10) {
+            player.y = -10;
           }
           break;
         case "down":
           player.y += player.speed;
-          if (player.y > (canvas.height-player.h)) {
-            player.y = (canvas.height-player.h+10);
+          if (player.y > (canvas.height-70)) {
+            player.y = (canvas.height-70);
           }
           break;
       }
@@ -60,6 +60,12 @@ var player1 = function(x,y,w, h,speed){
         this.h = 30;
         this.speed = 15;
     };
+
+
+
+
+
+
 
 
     function SpriteSheet(path, frameWidth, frameHeight, frameSpeed, endFrame) {
@@ -93,31 +99,14 @@ var player1 = function(x,y,w, h,speed){
             var row = Math.floor(currentFrame / framesPerRow);
             var col = Math.floor(currentFrame % framesPerRow);
 
-            ctx.drawImage(image, col * frameWidth, row * frameHeight, frameWidth, frameHeight, x, y, frameWidth, frameHeight);
+            ctx.drawImage(image, col * frameWidth, row * frameHeight, frameWidth, frameHeight, x, y, 70, 70);
         };
         
     };
 
 
-
-
-
-    
-
-    /* SPRITET EI TOIMI */
-    spritesheet = new SpriteSheet('flame.png', 2048/8, 2100/7, 3, 40);
-
-    function animate() {
-           requestAnimFrame( animate );
-           ctx.clearRect(0, 0, 150, 150);
-
-           spritesheet.update();
-
-           spritesheet.draw(12.5, 12.5);
-    }
  
     
-
 
 
         

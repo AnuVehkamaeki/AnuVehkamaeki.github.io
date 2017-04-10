@@ -8,6 +8,10 @@ $(window).on('load',function(){
     canvas.width = 1024/2;
     canvas.height = 768/2;
     
+    var spritesheet = new SpriteSheet('flame.png', 2048/8, 2100/7, 3, 40);
+    
+    var spritesheetEnemies = new SpriteSheet('alien.png', 513/9, 456/8, 3, 9);
+    
     var bgReady = false;
     var bgImage = new Image();
     bgImage.onload = function () {
@@ -46,11 +50,12 @@ $(window).on('load',function(){
     /* Draw everything */
     var render = function() {
         ctx.drawImage(bgImage,0,0,1024/2, 768/2);
-        drawPlayer(ctx);
+        //drawPlayer(ctx);
         for(i = 0; i<enemies.length; i++){
-            drawEnemy(ctx, enemies[i]);
+            spritesheet.draw(enemies[i].x, enemies[i].y);
+            //drawEnemy(ctx, enemies[i]);
         };
-        SpriteSheet();
+        
     };
 
     /* Update stuff every loop */
@@ -81,6 +86,11 @@ $(window).on('load',function(){
       update(delta / 1000);
       render();
 
+        /*ctx.clearRect(0, 0, 150, 150);*/
+        spritesheet.update();
+        spritesheetEnemies.update();
+        spritesheet.draw(player.x, player.y);
+        
       then = now;
 
       // Request to do this again ASAP
